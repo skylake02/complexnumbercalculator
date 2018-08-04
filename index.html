@@ -15,6 +15,7 @@
                 width: 100px; 
                 text-align: center; 
                 border: 0;
+                border-bottom: 2px solid #fff
             }
             input[type="number"]:focus {
                 outline: 0;
@@ -60,6 +61,8 @@
             input[type="submit"]:hover { cursor: pointer; transform: scale(1.1); }
             input[type="submit"]:active { color: #fff; background-color: #000; }
             input[type="submit"]:focus { outline: 0; }
+            
+            span { width: 100px; }
         </style>
     </head>
     <body>
@@ -71,7 +74,7 @@
                 <h3 style="margin-top: 20px;">Number Two</h3>
                 <input type="number" value="0" id="2r"/> + <input type="number" value="0" id="2i"/>i
                 <div class="operation">
-                    <input type="radio" name="operation" value="add"/> Add
+                    <input type="radio" name="operation" value="add" checked/> Add
                     <input type="radio" name="operation" value="subtract"/> Subtract
                     <input type="radio" name="operation" value="multiply"/> Multiply
                     <input type="radio" name="operation" value="divide"/> Divide
@@ -80,8 +83,10 @@
             </form>
             <section>
                 <h3 style="margin-top: 40px;">Result</h3>
-                <input type="number" value="0" id="ar"/> + <input type="number" value="0" id="ai"/>i
+                <span id="ar">0</span> + <span id="ai">0</span>i
             </section>
+            <p style="text-align: center; width: 50%; margin: 0 auto; margin-top: 40px;">The way math works, simple (non-complex) calculations can be done when the imaginary parts of the complex numbers are equal to 0 (duh).</p>
         </div>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
