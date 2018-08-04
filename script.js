@@ -25,8 +25,7 @@
                 ((one[0] * -two[1]) + (one[1] * two[0])) / three];
     }
     
-    form.addEventListener('submit', function () {
-        event.preventDefault();
+    form.addEventListener('submit', function (event) {
         var number1     = [parseInt(document.getElementById('1r').value, 10),
                            parseInt(document.getElementById('1i').value, 10)],
             number2     = [parseInt(document.getElementById('2r').value, 10),
@@ -52,5 +51,7 @@
         }
         document.getElementById('ar').textContent = Math.round(answer[0] * 100) / 100;
         document.getElementById('ai').textContent = Math.round(answer[1] * 100) / 100;
+        event.preventDefault();
+        return false;
     }, false);
 }());
